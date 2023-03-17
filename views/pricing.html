@@ -1,0 +1,988 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="pricing, free rest api bot whatsapp, whatsapp bot api">
+	<meta name="author" content="Danzz Coding">
+	<meta name="keywords" content="pricing, free rest api bot whatsapp, whatsapp bot api">
+		
+	<!-- ICON -->
+	<link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-icons.css">
+	<link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    
+    <!-- FONTS -->
+    <link rel="stylesheet" href="css/font.css?family=Inter:wght@300;400;600&display=swap">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	
+	<!-- DASHBOARD -->
+	<link rel="stylesheet" href="css/style.css" class="js-stylesheet">
+	
+	<!-- IMG -->
+	<link rel="shortcut icon" href="img/icons/1.png">
+	
+	<!-- TITLE -->
+	<title>Dashboard | Danzz Api</title>
+	
+	<!-- AUDIO AUTO PLAY -->
+	<audio autoplay="autoplay" hidden="hidden" src="https://www.mboxdrive.com/y2mate.com%20-%20Terjemahan%20Lagu%20Sedih%20Jepang%20%20Kokoronashi%20%20Tanpa%20Hati%20%20Lirik%20dan%20Translate%20Bahasa%20Indonesia.mp3"></audio>
+
+</head>
+
+<body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar js-sidebar">
+			<div class="sidebar-content js-simplebar">
+				<a class="sidebar-brand" href="#">
+					<span class="sidebar-brand-text align-middle">
+						Danzz Coding
+					</span>
+					<svg class="sidebar-brand-icon align-middle" width="32px" height="32px" viewbox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" color="#FFFFFF" style="margin-left: -3px">
+						<path d="M12 4L20 8.00004L12 12L4 8.00004L12 4Z"></path>
+						<path d="M20 12L12 16L4 12"></path>
+						<path d="M20 16L12 20L4 16"></path>
+					</svg>
+				</a>
+
+				<div class="sidebar-user">
+					<div class="d-flex justify-content-center">
+						<div class="flex-shrink-0">
+							<img src="img/avatars/1.png" class="avatar img-fluid rounded me-1" alt="Danzz Coding">
+						</div>
+						<div class="flex-grow-1 ps-2">
+							<a class="sidebar-user-title dropdown-toggle" href="#" data-bs-toggle="dropdown">
+								Free user
+							</a>
+							<div class="dropdown-menu dropdown-menu-start">
+								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Settings &
+									Privacy</a>
+								<a class="dropdown-item" href="https://wa.me/6289512545999?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/get-started">Log out</a>
+							</div>
+
+							<div class="sidebar-user-subtitle">Powered by: Danzz. All rights reserved</div>
+						</div>
+					</div>
+				</div>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Pages
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/">
+							<i class="align-middle" data-feather="home"></i><span class="align-middle">Home</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/dash">
+							<i class="align-middle" data-feather="grid"></i><span class="align-middle">Dashboard</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/profile">
+							<i class="align-middle" data-feather="user"></i><span class="align-middle">Profile</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item active">
+						<a class="sidebar-link" href="/pricing">
+							<i class="align-middle fa fa-fw bx bx-money"></i><span class="align-middle">Pricing</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/settings">
+							<i class="align-middle" data-feather="settings"></i><span class="align-middle">Settings</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/report-bug">
+							<i class="align-middle fa fa-fw bx bx-bug"></i><span class="align-middle">Report Bug</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-header">
+						Info
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="https://wa.me/6288296339947?text=menu">
+							<i class="align-middle bx bx-bot"></i><span class="align-middle">Example Bot</span><span class="sidebar-badge badge bg-danger">Off</span>
+						</a>
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="https://store.danzzcoding.my.id">
+							<i class="align-middle bx bx-code"></i><span class="align-middle">Source Code</span>
+						</a>
+					</li>
+
+					<li class="sidebar-item">
+						<a href="#web" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle bx bx-globe"></i><span class="align-middle">Web</span>
+						</a>
+						<ul id="web" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="https://wa.me/6289512545999">WhatsApp<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://chat.whatsapp.com/Gq71DUTFOhRE9efPYyobYu">Group WhatsApp<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://wa.me/6288296339947?text=menu">Example Bot<span class="sidebar-badge badge bg-danger">Off</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://github.com/danzzcoding/basebot-v1">Script Bot<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://www.danzzcoding.my.id">Website<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://api-danzz.xyz">Rest Api 2<span class="sidebar-badge badge bg-primary">On</span></a></li>
+						</ul>
+					</li>
+					
+					<li class="sidebar-item">
+						<a href="#cs" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-headset"></i><span class="align-middle">Customer Service</span>
+						</a>
+						<ul id="cs" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="https://wa.me/6289512545999?text=hallo+developer, saya ingin menyampaikan masalah nih.">WhatsApp on 24h<span class="sidebar-badge badge bg-primary">On</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="https://chat.whatsapp.com/Gq71DUTFOhRE9efPYyobYu">Gc WhatsApp on 24h<span class="sidebar-badge badge bg-primary">On</span></a></li>
+						</ul>
+					</li>
+
+					<li class="sidebar-header">
+						Main
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/statistic">
+							<i class="align-middle bx bx-coin-stack"></i><span class="align-middle">Statistic</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/runtime">
+							<i class="align-middle bx bx-time"></i><span class="align-middle">Runtime</span>
+						</a>
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="/main/uptime">
+							<i class="align-middle bx bx-timer"></i><span class="align-middle">Uptime</span>
+						</a>
+					</li>
+
+					<li class="sidebar-header">
+						Features
+					</li>
+					
+					<li class="sidebar-item">
+						<a data-bs-target="#downloader" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="arrow-down"></i><span class="align-middle">Downloader</span>
+						</a>
+						<ul id="downloader" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ytplay?query=dj 30 detik&apikey=danzz">Yt Play<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ytplaymp3?query=dj 30 detik&apikey=danzz">Yt Play Mp3<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ytplaymp4?query=dj 30 detik&apikey=danzz">Yt Play Mp4<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ytmp3?url=https://youtu.be/phFILGoPh7M&apikey=danzz">Yt Mp3<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ytmp4?url=https://youtu.be/phFILGoPh7M&apikey=danzz">Yt Mp4<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ttmp3?url=https://vm.tiktok.com/ZSdTj6w8b/?k=1&apikey=danzz">Tiktok Mp3<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ttmp4?url=https://vm.tiktok.com/ZSdTj6w8b/?k=1&apikey=danzz">Tiktok Mp4<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/facebook?url=https://www.facebook.com/TeguhSuwandi19/videos/5230538373729232/?mibextid=XBoEBUlHZ1eoDabU&apikey=danzz">Facebook<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/twitter?url=https://twitter.com/30SECVlDEOS/status/1572038574140178433?s=20&t=oQSHC7nbREPNVE68Zd4Bww&apikey=danzz">Twitter<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/igstory?username=danzzcoding&apikey=danzz">Ig Story<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/igreels?url=ENTER_URL&apikey=danzz">Ig Reels<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/igvideo?url=ENTER_URL&apikey=danzz">Ig Video<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/igimg?url=ENTER_URL&apikey=danzz">Ig Img<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/snapinsta?url=ENTER_URL&apikey=danzz">Snap Insta<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/ssstik?url=ENTER_URL&apikey=danzz">Sss Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/snaptik?url=ENTER_URL&apikey=danzz">Snap Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/savefrom?url=ENTER_URL&apikey=danzz">Save From<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/mediafire?url=https://www.mediafire.com/file/pwxob70rpgma9lz/GBWhatsApp_v8.75%2528Tutorial_Yud%2529.apk/file&apikey=danzz">Mediafire<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/zippy?url=ENTER_URL&apikey=danzz">Zippy<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/soundcloud?url=https://soundcloud.com/ndaa-212683099/dj-coba-kau-ingat-ingat-kembali-seharusnya-aku-jungle-dutch-terbaru-2021-full-bass-viral-tik?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing&apikey=danzz">Sound Cloud<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/aiovideo?url=ENTER_URL&apikey=danzz">Aio Video<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/xxxx?url=ENTER_URL&apikey=danzz">Xxxx<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/downloader/xnxx?url=ENTER_URL&apikey=danzz">Xnxx<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#asupan" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="video"></i><span class="align-middle">Asupan</span>
+						</a>
+						<ul id="asupan" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/random?apikey=danzz">Random<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/santuy?apikey=danzz">Santuy<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/bocil?apikey=danzz">Bocil<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/hijaber?apikey=danzz">Hijaber<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/ukhty?apikey=danzz">Ukhty<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/gheayubi?apikey=danzz">Ghea Yubi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/asupan/rikagusriani?apikey=danzz">Rika Gusriani<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#cecan" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Cecan</span>
+						</a>
+						<ul id="cecan" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/random?apikey=danzz">Random<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/hijaber?apikey=danzz">Hijaber<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/china?apikey=danzz">China<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/indonesia?apikey=danzz">Indonesia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/japan?apikey=danzz">Japan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/korea?apikey=danzz">Korea<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/malaysia?apikey=danzz">Malaysia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/thailand?apikey=danzz">Thailand<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cecan/vietnam?apikey=danzz">Vietnam<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#cogan" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Cogan</span>
+						</a>
+						<ul id="cogan" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/cogan/random?apikey=danzz">Random<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#search" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="search"></i><span class="align-middle">Search</span>
+						</a>
+						<ul id="search" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/youtube?query=cara membuat rest api&apikey=danzz">Youtube<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/joox?query=until i found you&apikey=danzz">Joox<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/xxxxvideo?query=japan&apikey=danzz">Xxxx<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/xnxxvideo?query=japan&apikey=danzz">Xnxx<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/pornhub?query=japan&apikey=danzz">Porn Hub<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/ringtone?query=samsung&apikey=danzz">Ring Tone<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/sticker?query=smile&apikey=danzz">Sticker<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/gcwa?query=kawan&apikey=danzz">Group Wa<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/wikimedia?query=coding&apikey=danzz">Wiki Media<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/pinterest?query=cecan&apikey=danzz">Pinterest<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/shopee?query=semvak&apikey=danzz">Shopee<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/gplaystore?query=mobilelegends&apikey=danzz">Play Store<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/appstore?query=freefire&num=100&page=1&apikey=danzz">App Store<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/happymod?query=mobilelegends&apikey=danzz">Happy Mod<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/sfile?query=WhatsApp&apikey=danzz">Sfile<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/apkmody?query=WhatsApp&apikey=danzz">Apk Mody<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/moddroid?query=WhatsApp&apikey=danzz">Mod Droid<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/gsmarena?query=ss j4+&apikey=danzz">Gsm Arena<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/wallpaper?query=aesthetic&apikey=danzz">Wallpaper<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/google?query=cecan&apikey=danzz">Google<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/search/googleimage?query=cecan&apikey=danzz">Google Img<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#film" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="film"></i><span class="align-middle">Film</span>
+						</a>
+						<ul id="film" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/film/search?query=scot&apikey=danzz">Search<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/film/play?query=scot&apikey=danzz">Play<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#textpro" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="edit"></i><span class="align-middle">Text Pro</span>
+						</a>
+						<ul id="textpro" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/textpro/pencil?text=danzz&apikey=danzz">Pencils<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/berry?text=danzz&apikey=danzz">Berry<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                 	       <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/blackpink?text=danzz&apikey=danzz">Black pink<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/neon?text=danzz&apikey=danzz">Neon<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/logobear?text=danzz&apikey=danzz">Logo Bear<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/3dchristmas?text=danzz&apikey=danzz">3D Christmas<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   	     <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/thunder?text=danzz&apikey=danzz">Thunder<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/3dboxtext?text=danzz&apikey=danzz">3D Box<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+			                <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/glitch?text=danzz&apikey=danzz">Glitch<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/glitch2?text=danzz&text2=pro&apikey=danzz">Glitch2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/glitchtiktok?text=danzz&text2=pro&apikey=danzz">Glitch Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                	        <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/video-game-classic?text=danzz&text2=pro&apikey=danzz">Video Game Classic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                	        <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/marvel-studios?text=danzz&text2=pro&apikey=danzz">Marvel Studios<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/textpro/ninja-logo?text=danzz&text2=pro&apikey=danzz">Ninja Logo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   	     <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/green-horror?text=danzz&apikey=danzz">Green Horrorer<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   	     <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/magma?text=danzz&apikey=danzz">Magma<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/3d-neon-light?text=danzz&apikey=danzz">3d Neon Light<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/textpro/3d-orange-juice?text=danzz&apikey=danzz">3d Orange Juice<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/chocolate-cake?text=danzz&apikey=danzz">Chocolate Cake<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/textpro/strawberry?text=danzz&apikey=danzz">Strawberry<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#photooxy" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="camera"></i><span class="align-middle">Photo Oxy</span>
+						</a>
+						<ul id="photooxy" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/flaming?text=danzz&apikey=danzz">Flaming<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/shadow-sky?text=danzz&apikey=danzz">Shadow Sky<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/metallic?text=danzz&apikey=danzz">Metallic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/naruto?text=danzz&apikey=danzz">Naruto<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+        	                <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/pubg?text=Pubg&text2=danzz&apikey=danzz">PUBG<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/under-grass?text=danzz&apikey=danzz">Under Grass<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/harry-potter?text=danzz&apikey=danzz">Harry Potter<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                	        <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/flower-typography?text=danzz&apikey=danzz">Flower Typography<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+          	              <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/picture-of-love?text=danzz&apikey=danzz">Picture Of Love<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/coffee-cup?text=danzz&apikey=danzz">Coffee Cup<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/butterfly?text=danzz&apikey=danzz">Butterfly<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+      	                  <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/night-sky?text=danzz&apikey=danzz">Night Sky<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/carved-wood?text=danzz&apikey=danzz">Carved Wood<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/illuminated-metallic?text=danzz&apikey=danzz">Illuminated Metallic<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/photooxy/sweet-candy?text=danzz&apikey=danzz">Sweet Candy<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#canvas" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Canvas</span>
+						</a>
+						<ul id="canvas" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/canvas/welcome?name=danzz&gcname=cs danzz rest api&member=1&pp=https://telegra.ph/file/438ba064eff21aa28514d.jpg&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=danzz">Welcome<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/canvas/welcome2?name=danzz&mem=1&gcname=cs danzz rest api&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Welcome 2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                 	       <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/welcome3?name=danzz&mem=1&gcname=cs danzz rest api&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&gcicon=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Welcome 3<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/goodbye?name=danzz&gcname=cs danzz rest api&member=1&pp=https://telegra.ph/file/438ba064eff21aa28514d.jpg&bg=https://telegra.ph/file/438ba064eff21aa28514d.jpg&apikey=danzz">Good Bye<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                	        <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/goodbye2?name=danzz&mem=1&gcname=cs danzz rest api&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Good Bye 2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/goodbye3?name=danzz&mem=1&gcname=cs danzz rest api&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&picurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bgurl=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&gcicon=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Good Bye 3<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/verify?name=danzz&mem=1&sn=123&pp=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Verify<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/verify2?name=danzz&nameverify=danzz&name2=danzz&pp=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&pp2=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&bg=https://w0.peakpx.com/wallpaper/11/65/HD-wallpaper-anime-girl-loli-cute-brown-hair-twintails-anime.jpg&apikey=danzz">Verify 2<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/sadcat?text=asep&apikey=danzz">Sad Cat<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/facts?text=asep&apikey=danzz">Fatcs<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/pikachu?text=asep&apikey=danzz">Pikachu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                 	       <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/biden?text=Rakyat Konnn&apikey=danzz">Biden<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/canvas/oogway?text=asep&apikey=danzz">Oogway<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#maker" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-paint-brush"></i> <span class="align-middle">Maker</span>
+						</a>
+						<ul id="maker" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="api/maker/wanted?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Wanted<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/maker/trigger?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Trigger<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/maker/gun?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Gun<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/maker/greyscale?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Grey Scale<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              	          <li class="sidebar-item"><a class="sidebar-link" href="api/maker/ad?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Ad<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+             	           <li class="sidebar-item"><a class="sidebar-link" href="api/maker/blur?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Blur<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/maker/uncover?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Uncover<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            	            <li class="sidebar-item"><a class="sidebar-link" href="api/maker/invert?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Invert<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/maker/darkness?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&no=100&apikey=danzz">Dark Ness<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/maker/facepalm?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Face Palm<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/maker/pixelate?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&no=10&apikey=danzz">Pixelate<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/maker/rainbow?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Rainbow<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         			   	<li class="sidebar-item"><a class="sidebar-link" href="api/maker/circle?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Circle<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         			       <li class="sidebar-item"><a class="sidebar-link" href="api/maker/beautiful?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&apikey=danzz">Beautiful<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/maker/resize?url=https://telegra.ph/file/a16394fe23cbca802fcd8.jpg&width=200&height=200&apikey=danzz">Resize<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         			   	<li class="sidebar-item"><a class="sidebar-link" href="api/maker/emojimix?emoji=😂&emoji2=😭&apikey=danzz">Emoji Mix<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/maker/ttp?text=danzz&apikey=danzz">Ttp<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            	            <li class="sidebar-item"><a class="sidebar-link" href="api/maker/attp?text=danzz&apikey=danzz">Attp<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         	               <li class="sidebar-item"><a class="sidebar-link" href="api/maker/nulis?text=danzz&apikey=danzz">Nulis<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#wallpaper" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-images"></i><span class="align-middle">Wallpaper</span>
+						</a>
+						<ul id="wallpaper" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/random?apikey=danzz">Random<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            	            <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/ml?apikey=danzz">Ml<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         	               <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/pubg?apikey=danzz">Pubg<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/neon?apikey=danzz">Neon<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+         				   <li class="sidebar-item"><a class="sidebar-link" href="api/wallpaper/code?apikey=danzz">Code<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#fun" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-smile"></i><span class="align-middle">Fun</span>
+						</a>
+						<ul id="fun" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/fun/rate?text=ganteng&apikey=danzz">Rate<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			 <li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekmasadepan?apikey=danzz">Cek Masa Depan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			 <li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekpositifcovid?apikey=danzz">Cek Positif Covid<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/siapakahaku?apikey=danzz">Siapa Kah Aku<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/siapakahdia?apikey=danzz">Siapa Kah Dia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/kapankah?text=anda tobat&apikey=danzz">Kapan Kah<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/dimanakah?text=anda berada&apikey=danzz">Dimana Kah<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekgay?apikey=danzz">Cek Gay<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/ceklesby?apikey=danzz">Cek Lesby<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekganteng?apikey=danzz">Cek Ganteng<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekcantik?apikey=danzz">Cek Cantik<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekkaya?apikey=danzz">Cek Kaya<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/cekmiskin?apikey=danzz">Cek Miskin<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/fun/asahotak?apikey=danzz">Asah Otak<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/caklontong?apikey=danzz">Cak Lontong<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/truth?apikey=danzz">Truth<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/dare?apikey=danzz">Dare<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/darkjoke?apikey=danzz">Dark Joke<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/family100?apikey=danzz">Family 100<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/pantun?apikey=danzz">Pantun<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakgabut?apikey=danzz">Tebak Gabut<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebaklucu?apikey=danzz">Tebak Lucu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/susunkata?apikey=danzz">Susun Kata<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakgambar?apikey=danzz">Tebak Gambar<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakbendera?apikey=danzz">Tebak Bendera<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakgame?apikey=danzz">Tebak Game<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakkata?apikey=danzz">Tebak Kata<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebaklirik?apikey=danzz">Tebak Lirik<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebaklagu?apikey=danzz">Tebak Lagu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+            				<li class="sidebar-item"><a class="sidebar-link" href="api/fun/tebakkimia?apikey=danzz">Tebak Kimia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#simi" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-bot"></i><span class="align-middle">Simi</span>
+						</a>
+						<ul id="simi" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/simi/simi?text=hai&lang=id&apikey=danzz">Simi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/simi/simi-en?text=hii&apikey=danzz">Simi English<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/simi/simi-jp?text=hii&apikey=danzz">Simi Japan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/simi/simi-id?text=hii&apikey=danzz">Simi Indonesia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/simi/simi-ar?text=hii&apikey=danzz">Simi Arab<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#anime" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Anime</span>
+						</a>
+						<ul id="anime" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/anime/search?query=waifu&apikey=danzz">Search<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			 <li class="sidebar-item"><a class="sidebar-link" href="api/anime/manga?query=waifu&apikey=danzz">Manga<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/anime/wibu?query=waifu&apikey=danzz">Wibu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/anime/fandom?query=waifu&apikey=danzz">Fandom<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/character?query=waifu&apikey=danzz">Character<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/topanime?apikey=danzz">Top Anime<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/topmanga?apikey=danzz">Top Manga<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/otakudesusearch?query=waifu&apikey=danzz">Otakudesu Search<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/otakudesudetail?url=ENTER_URL&apikey=danzz">Otakudesu Detail<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/anime/otakudesudownload?url=ENTER_URL&apikey=danzz">Otakudesu Download<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#sfw" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Sfw</span>
+						</a>
+						<ul id="sfw" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/sfw/waifu?apikey=danzz">Waifu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/sfw/husbu?apikey=danzz">Husbu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/sfw/loli?apikey=danzz">Loli<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/sfw/milf?apikey=danzz">Milf<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/sfw/neko?apikey=danzz">Neko<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/sfw/shota?apikey=danzz">Shota<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#nsfw" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle" data-feather="image"></i><span class="align-middle">Nsfw</span>
+						</a>
+						<ul id="nsfw" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/hentai?apikey=danzz">Hentai<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/glasses?apikey=danzz">Glasses<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/neko?apikey=danzz">Neko<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/orgy?apikey=danzz">Orgy<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/panties?apikey=danzz">Panties<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/foot?apikey=danzz">Foot<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/cuckold?apikey=danzz">Cuckold<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/pussy?apikey=danzz">Pussy<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/yuri?apikey=danzz">Yuri<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/jahy?apikey=danzz">Jahy<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/ahegao?apikey=danzz">Ahegao<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/bdsm?apikey=danzz">Bdsm<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/blowjob?apikey=danzz">Blowjob<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/gangbang?apikey=danzz">Gang Bang<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                  		  <li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/cum?apikey=danzz">Cum<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/ero?apikey=danzz">Ero<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/femdom?apikey=danzz">Femdom<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/manga?apikey=danzz">Manga<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/masturbation?apikey=danzz">Masturbation<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/ass?apikey=danzz">Ass<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/eba?apikey=danzz">Eba<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/thighs?apikey=danzz">Thighs<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/nsfw/zettai?apikey=danzz">Zettai<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#random" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw fa-bullseye"></i><span class="align-middle">Random</span>
+						</a>
+						<ul id="random" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/random/meme?apikey=danzz">Meme<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               		 	<li class="sidebar-item"><a class="sidebar-link" href="api/random/katakasar?apikey=danzz">Kata Kasar<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/random/quotes?apikey=danzz">Quotes<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/random/dadu?apikey=danzz">Dadu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/random/coffee?apikey=danzz">Coffee<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#stalk" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw fa-fw bx bx-user-check"></i><span class="align-middle">Stalker</span>
+						</a>
+							<ul id="stalk" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/github?username=danzzcoding&apikey=danzz">Github<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			 <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/githubrepo?repo=basebot-v1&apikey=danzz">Github Repo<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			 <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/npm?username=hx&apikey=danzz">Npm<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+          	              <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/instagram?username=danzzcoding&apikey=danzz">Instagram<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+          				  <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/twitter?username=ramdani&apikey=danzz">Twitter<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/tiktok?username=muhammad_ramdanii&apikey=danzz">Tiktok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/tg?username=dani&apikey=danzz">Tg<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   	     <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickhago?id=31148107&apikey=danzz">Nick Hago<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickccfun?id=16427735&apikey=danzz">Nick Coco Fun<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickbgl?id=108689087&apikey=danzz">Nick Bigo Live<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nicknmtv?id=2753124392&apikey=danzz">Nick Nimo TV<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickpubg?id=ENTER_ID&apikey=danzz">Nick Pubg Mobile<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickff?id=552992060&apikey=danzz">Nick Free Fire<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickml?id=628299715&zoneid=10135&apikey=danzz">Nick Mobile Legends<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   	     <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickmla?id=3937205&zoneid=40017&apikey=danzz">Nick ML Adventure<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nicklokapala?id=YZTTG3CU&apikey=danzz">Nick Lokapala<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                	        <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickdomino?id=ENTER_ID&apikey=danzz">Nick Domino<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickzepeto?id=zepeto&apikey=danzz">Nick Zepeto<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+          	              <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nicksausage?id=7fs17x&apikey=danzz">Nick Sausage Man<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+           	             <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickaov?id=293306941441181&apikey=danzz">Nick Arena Of Valor<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickcod?id=6290150021186841472&apikey=danzz">Nick Call Of Duty<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/stalker/nickpb?id=dani123&apikey=danzz">Nick Point Blank<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#shortlink" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-link"></i><span class="align-middle">Short Link</span>
+						</a>
+						<ul id="shortlink" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/shortlink/tinyualias?url=https://danzzapi.xyz/&alias=restapi&apikey=danzz">Tinyu Alias<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               			<li class="sidebar-item"><a class="sidebar-link" href="api/shortlink/tinyurl?url=https://danzzapi.xyz/&apikey=danzz">Tinyu<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/shortlink/cuttly?url=https://danzzapi.xyz/&apikey=danzz">Cuttly<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/shortlink/bitly?url=https://danzzapi.xyz/&apikey=danzz">Bitly<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#islamic" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-moon"></i><span class="align-middle">Islamic</span>
+						</a>
+						<ul id="islamic" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/randomimage?apikey=danzz">Random Image<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/islamic/jadwalsholat?no=1&apikey=danzz">Jadwal Sholat<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/kisahnabi?name=muhammad&apikey=danzz">Kisah Nabi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                 		   <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/asmaulhusna?apikey=danzz">Asmaul Husna<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/hadist?apikey=danzz">Hadist<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                  	      <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/quran?apikey=danzz">Quran<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+               		     <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/surah?text=1&apikey=danzz">Surah<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+              		      <li class="sidebar-item"><a class="sidebar-link" href="api/islamic/tafsirsurah?text=1&apikey=danzz">Tafsir Surah<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#trending" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-compass"></i><span class="align-middle">Trending</span>
+						</a>
+						<ul id="trending" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+               	         <li class="sidebar-item"><a class="sidebar-link" href="api/trending/bekasi?apikey=danzz">Bekasi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/trending/bandung?apikey=danzz">Bandung<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/trending/jakarta?apikey=danzz">Jakarta<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/trending/depok?apikey=danzz">Depok<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/trending/pekanbaru?apikey=danzz">Pekanbaru<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/trending/surabaya?apikey=danzz">Surabaya<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/trending/makassar?apikey=danzz">Makassar<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/trending/medan?apikey=danzz">Medan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/trending/palembang?apikey=danzz">Palembang<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/trending/semarang?apikey=danzz">Semarang<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/trending/tangerang?apikey=danzz">Tanggerang<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#news" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-book"></i><span class="align-middle">News</span>
+						</a>
+						<ul id="news" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/news/cnn?apikey=danzz">Cnn<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/news/tribun?apikey=danzz">Tribun<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/news/kompas?apikey=danzz">Kompas<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/news/inews?apikey=danzz">INews<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/news/okezone?apikey=danzz">Oke Zone<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/news/antara?apikey=danzz">Antara<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#information" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw fa-fw bx bx-info-circle"></i><span class="align-middle">Information</span>
+						</a>
+						<ul id="information" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/gempa?apikey=danzz">Gempa<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/covid?apikey=danzz">Covid<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/covidworld?apikey=danzz">Covid World<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/postalcode?city=bogor&apikey=danzz">Postal Code<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/hoax?apikey=danzz">Hoax<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/jadwalbola?apikey=danzz">Jadwal Bola<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/clock?apikey=danzz">Jam WIB<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/information/worldclock?apikey=danzz">Jam Dunia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/information/kbbi?query=bunga&apikey=danzz">Kbbi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/information/wikipedia?query=manusia&apikey=danzz">Wiki Pedia<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#primbon" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-anchor"></i><span class="align-middle">Primbon</span>
+						</a>
+						<ul id="primbon" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/primbon/ramalanjodoh?name1=dani&name2=nia&apikey=danzz">Ramalan Jodoh<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/primbon/ramalanjadian?date=1&month=8&year=2022&apikey=danzz">Ramalan Jadian<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/primbon/artinama?name=danzz&apikey=danzz">Arti Nama<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/primbon/tafsirmimpi?dream=basah&apikey=danzz">Tafsir Mimpi<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#tools" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw fa-tools"></i><span class="align-middle">Tools</span>
+						</a>
+						<ul id="tools" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/tools/ebase64?text=DANIGANTENG&apikey=danzz">Base64 Encrypt<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+                       	 <li class="sidebar-item"><a class="sidebar-link" href="api/tools/dbase64?text=DANIGANTENG&apikey=danzz">Base64 Decrypt<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/ebase32?text=DANIGANTENG&apikey=danzz">Base32 Encrypt<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/dbase32?text=DANIGANTENG&apikey=danzz">Base32 Decrypt<span class="sidebar-badge badge bg-primary">Vip</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/ebinary?text=DANIGANTENG&apikey=danzz">Binary Encrypt<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/dbinary?text=DANIGANTENG&apikey=danzz">Binary Decrypt<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/tools/styletext?text=DANIGANTENG&apikey=danzz">Style Text<span class="sidebar-badge badge bg-primary">Premium</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/tts?text=Thanks&lang=id-ID&apikey=danzz">Text To Speech<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/translate?text=Thanks&lang=ms&apikey=danzz">Translate<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/sswebdesktop?url=https://danzzapi.xyz/&apikey=danzz">Ssweb Desktop<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/sswebtablet?url=https://danzzapi.xyz/&apikey=danzz">Ssweb Tablet<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/tools/sswebphone?url=https://danzzapi.xyz/&apikey=danzz">Ssweb Phone<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/tools/fakeaddress?apikey=danzz">Fake Address<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a data-bs-target="#other" data-bs-toggle="collapse" class="sidebar-link collapsed">
+							<i class="align-middle fa fa-fw bx bx-leaf"></i><span class="align-middle">Other</span>
+						</a>
+						<ul id="other" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                        	<li class="sidebar-item"><a class="sidebar-link" href="api/other/qrcode?url=danzz&apikey=danzz">Qr Code<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="api/other/couplepp?url=danzz&apikey=danzz">Couple Pp<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/other/balikhuruf?text=dani&apikey=danzz">Balik Huruf<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/other/balikangka?text=1234&apikey=danzz">Balik Angka<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/other/bilangangka?number=1234&apikey=danzz">Bilang Angka<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/other/besarkecil?text=danzz&apikey=danzz">Besar Kecil<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                      	  <li class="sidebar-item"><a class="sidebar-link" href="api/other/heleh?text=danzz&apikey=danzz">Heleh<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/other/huluh?text=danzz&apikey=danzz">Huluh<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/other/hilih?text=danzz&apikey=danzz">Hilih<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/other/halah?text=danzz&apikey=danzz">Halah<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/other/kapital?text=danzz&apikey=danzz">Kapital<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    		<li class="sidebar-item"><a class="sidebar-link" href="api/other/katajago?text=danzz&apikey=danzz">Kata Jago<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                     	   <li class="sidebar-item"><a class="sidebar-link" href="api/other/resepmasakan?menu=bakso&apikey=danzz">Resep Masakan<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                    	    <li class="sidebar-item"><a class="sidebar-link" href="api/other/jumblahhuruf?text=danzz&apikey=danzz">Jumblah Huruf<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                            <li class="sidebar-item"><a class="sidebar-link" href="api/other/jumblahangka?text=123&apikey=danzz">Jumblah Angka<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+                   		 <li class="sidebar-item"><a class="sidebar-link" href="api/other/detailhero?hero=fanny&apikey=danzz">Detail Hero<span class="sidebar-badge badge bg-primary">Free</span></a></li>
+						</ul>
+					</li>
+					
+					<li class="sidebar-header">
+						Social Media
+					</li>
+
+							<li class="sidebar-item">
+							<a class="sidebar-link" href="https://www.instagram.com/danzzcoding">
+							<i class="align-middle bx bxl-instagram"></i><span class="align-middle">Instagram</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="https://www.facebook.com/danzzcoding">
+							<i class="align-middle bx bxl-facebook"></i><span class="align-middle">Facebook</span>
+							</a>
+						</li>
+						<li class="sidebar-item">
+							<a class="sidebar-link" href="https://www.youtube.com/c/DanzzCoding">
+							<i class="align-middle bx bxl-youtube"></i><span class="align-middle">Youtube</span>
+							</a>
+						</li>
+					
+				<li class="sidebar-header">
+						Contact
+					</li>
+					
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="mailto:danzzcoding@gmail.com">
+							<i class="align-middle bx bx-envelope"></i><span class="align-middle">Email</span>
+							</a>
+					</li>
+							<li class="sidebar-item">
+						<a class="sidebar-link" href="https://wa.me/6289512545999">
+							<i class="align-middle bx bxl-whatsapp"></i><span class="align-middle">WhatsApp</span>
+							</a>
+					</li>
+
+				<div class="sidebar-cta">
+					<div class="sidebar-cta-content">
+						<strong class="d-inline-block mb-2">Upgrade to premium</strong>
+						<div class="mb-3 text-sm">
+							upgrade to premium to enjoy access to premium features.
+						</div>
+
+						<div class="d-grid">
+							<a href="/pricing" class="btn btn-outline-primary" target="_blank">Upgrade Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light navbar-bg">
+				<a class="sidebar-toggle js-sidebar-toggle">
+					<i class="hamburger align-self-center"></i>
+				</a>DANZZ API
+
+				<form class="d-none d-sm-inline-block">
+					<div class="input-group input-group-navbar">
+						<input type="text" class="form-control" placeholder="Search…" aria-label="Search">
+						<button class="btn" type="button">
+							<i class="align-middle" data-feather="search"></i>
+						</button>
+					</div>
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="message-square"></i>
+									<span class="indicator">9+</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<center>
+                 	  			 <iframe src="https://my.cbox.ws/danzzapi" width="90%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                  				</center>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Close message</a>
+								</div>
+							</div>
+						</li>
+						<div class="navbar-collapse collapse">
+					<ul class="navbar-nav navbar-align">
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="bell"></i>
+									<span class="indicator">4</span>
+								</div>
+							</a>
+							<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+								<div class="dropdown-menu-header">
+									4 New Notifications
+								</div>
+								<div class="list-group">
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-danger" data-feather="alert-circle"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Date of manufacture</div>
+												<div class="text-muted small mt-1">Danzz, make an app on. 3 October, 2022</div>
+												<div class="text-muted small mt-1">1 second ago</div>
+											</div>
+										</div>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-warning" data-feather="arrow-up"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">Publication date</div>
+												<div class="text-muted small mt-1">Danzz, published this app on. 3 October, 2022</div>
+												<div class="text-muted small mt-1">1 second ago</div>
+											</div>
+										</div>
+									</a>
+									</a>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">New user</div>
+												<div class="text-muted small mt-1">Asep just signed up.</div>
+												<div class="text-muted small mt-1">1 second ago</div>
+											</div>
+										</div>
+									<a href="#" class="list-group-item">
+										<div class="row g-0 align-items-center">
+											<div class="col-2">
+												<i class="text-success" data-feather="user-plus"></i>
+											</div>
+											<div class="col-10">
+												<div class="text-dark">New user</div>
+												<div class="text-muted small mt-1">Basreng anying just signed up.</div>
+												<div class="text-muted small mt-1">1 second ago</div>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="dropdown-menu-footer">
+									<a href="#" class="text-muted">Close all notifications</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-icon js-fullscreen d-none d-lg-block" href="#">
+								<div class="position-relative">
+									<i class="align-middle" data-feather="maximize"></i>
+								</div>
+							</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
+								<img src="img/avatars/1.png" class="avatar img-fluid rounded" alt="Danzz Coding">
+							</a>
+							<div class="dropdown-menu dropdown-menu-end">
+								<a class="dropdown-item" href="/profile"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/settings"><i class="align-middle me-1" data-feather="settings"></i> Settings &
+									Privacy</a>
+								<a class="dropdown-item" href="https://wa.me/6288296339947?text=help!!!"><i class="align-middle me-1" data-feather="help-circle"></i> Help Center</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="/get-started">Log out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="mb-3">
+						<h1 class="h3 d-inline align-middle">Pricing</h1>
+					</div>
+
+					<div class="row">
+						<div class="col-md-10 col-xl-8 mx-auto">
+							<h1 class="text-center"></h1>
+							<p class="lead text-center mb-4"></p>
+
+							<div class="row justify-content-center mt-3 mb-2">
+								<div class="col-auto">
+									<nav class="nav btn-group">
+									</nav>
+								</div>
+							</div>
+
+							<div class="tab-content">
+								<div class="tab-pane fade show active" id="monthly">
+									<div class="row py-4">
+										<div class="col-sm-4 mb-3 mb-md-0">
+											<div class="card text-center h-100">
+												<div class="card-body d-flex flex-column">
+													<div class="mb-4">
+														<h5>VIP</h5>
+														<span class="display-4"><sup>Rp.</sup>25</span>
+														<span>/month</span>
+													</div>
+													<h5><b>Profit:</b></h5>
+													<ul class="list-unstyled">
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Request Unlimited</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Custom API Key</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Limit Unlimited</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Premium&VIP Features</div>
+														</li>
+													</ul>
+													<div class="mt-auto">
+														<a href="https://wa.me/6289512545999?text=Permisi kak, saya mau order *VIP user* 1 bulan 25k." class="btn btn-lg btn-outline-primary">Order Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-3 mb-md-0">
+											<div class="card text-center h-100">
+												<div class="card-body d-flex flex-column">
+													<div class="mb-4">
+														<h5>Premium</h5>
+														<span class="display-4"><sup>Rp.</sup>15</span>
+														<span>/month</span>
+													</div>
+													<h5><b>Profit:</b></h5>
+													<ul class="list-unstyled">
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Request 1000/day</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Custom API Key</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Limit 1000/day</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Premium Features</div>
+														</li>
+													</ul>
+													<div class="mt-auto">
+														<a href="https://wa.me/6289512545999?text=Permisi kak, saya mau order *premium user* 1 bulan 15k." class="btn btn-lg btn-outline-primary">Order Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4 mb-3 mb-md-0">
+											<div class="card text-center h-100">
+												<div class="card-body d-flex flex-column">
+													<div class="mb-4">
+														<h5>Free</h5>
+														<span class="display-4"><sup>Rp.</sup>0</span>
+														<span>/W expiry</span>
+													</div>
+													<h5><b>Profit:</b></h5>
+													<ul class="list-unstyled">
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Request 100/day</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Limit 100/day</div>
+														</li>
+														<li class="mb-2">
+															<div class="bx bx-check-circle"> Free Features</div>
+														</li>
+													</ul>
+													<div class="mt-auto">
+														<a href="/dash" class="btn btn-lg btn-outline-primary">Start Now</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						
+					</div>
+				</main>
+					
+			<!-- Footer -->
+			<footer class="footer">
+				<script type="text/javascript">
+   				 var det = new Date();
+    				var tahun = det.getFullYear();
+    				year = tahun;
+				</script>
+				<div class="container-fluid">
+					<div class="footer-wrap pd-20 mb-20 card-box">
+					Copyright © <script>document.write(year);</script>
+					<a href="https://youtube.com/c/DanzzCoding" target="_blank"
+						>Danzz Coding</a
+					>. All rights reserved.
+				</div>
+				</div>
+			</footer>
+			<!-- End Footer -->
+				
+			<!-- Back To Top -->
+      	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+      	  <!-- End Back To Top -->
+      	
+		</div>
+	</div>
+    <script src="js/scroll.js"></script>
+    <script src="js/dash.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
